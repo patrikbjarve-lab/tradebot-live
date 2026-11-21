@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<meta name="theme-color" content="#07090d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tradebot">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/style.css">
+<title>Tradebot Live</title>
+</head>
+<body>
+<div id="lock" class="lock">
+  <form id="lockform" class="lock-card" autocomplete="on">
+    <div class="lock-brand"><img src="assets/icon.svg" alt=""><span>TRADEBOT<b>LIVE</b></span></div>
+    <p class="muted">Privat terminal. Innehållet är krypterat och låses upp lokalt i din webbläsare.</p>
+    <input type="text" name="username" value="tradebot" autocomplete="username" hidden>
+    <label class="field"><span>LÖSENORD</span>
+      <input id="pw" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false" required>
+    </label>
+    <label class="check"><input id="remember" type="checkbox" checked> Kom ihåg mig på den här enheten</label>
+    <button id="unlock" type="submit">LÅS UPP</button>
+    <p id="lockmsg" class="lockmsg" role="status"></p>
+  </form>
+</div>
+
+<div id="app" class="app" hidden>
+  <header class="top">
+    <div class="brand"><img src="assets/icon.svg" alt=""><span>TRADEBOT<b>LIVE</b></span><span class="badge paper" id="modebadge">PAPPER</span></div>
+    <div class="top-right"><span id="clock" class="mono muted"></span><button id="lockbtn" class="ghost" title="Lås sidan på den här enheten">LÅS</button></div>
+  </header>
+  <div class="tape" aria-label="Kurser"><div id="tape" class="tape-track"></div></div>
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+  <div id="statusbar" class="statusbar"></div>
+  <div id="panes"></div>
+  <footer class="foot">
+    <p>Pappershandel – virtuella pengar, inga riktiga ordrar. Skrivskyddad vy, uppdateras automatiskt varje minut.</p>
+    <p id="foot-gen" class="muted mono"></p>
+    <p class="muted">Diagram: TradingView Lightweight Charts™ (Apache-2.0).</p>
+  </footer>
+</div>
+<script src="assets/lightweight-charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
